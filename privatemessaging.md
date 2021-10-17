@@ -15,8 +15,8 @@ reasonably related to the channel.
 - At a minimum, both participants must be or recently have been channel
 participants.
 - If the private messages constitute harassment, that's beyond the scope of
-channel rules: it's prohibited by freenode's policies, and that will get
-sender K'lined.
+channel rules: it's prohibited by Libera.Chat's policies, and that will get
+sender K-lined.
 
 Sometimes you can infer permission from previous interactions, and sometimes
 you should infer withdrawal of permission. This cannot be absolute; it needs
