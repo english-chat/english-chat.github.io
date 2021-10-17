@@ -1,6 +1,51 @@
-# ⚠️ Unmaintained ⚠️
+⚠️ Note: Since the source of this theme is now unmaintained, this repo is a
+happily mutilated version of it. ⚠️
 
-# Prologue - Jekyll Theme
+# How to add new content to the site
+
+## Adding new sections for the main page:
+
+Place markdown in .md files inside `/_sections/`. They will appear as new
+sections below the horizontal line on the sidebar.
+
+Copy the frontmatter (the stuff between the `---` at the top of each page) to
+use as a template.
+
+By default the title in the frontmatter will be displayed as a h1. This can be
+disabled by `auto-header: none` or replaced by `auto-header: new header text`
+
+The icons are currently using fontawesome 5.15.0 (upgraded from the vanilla
+theme) and will default to a link icon if none provided. If an invalid `fa-`
+code is given the link icon will be blank; in case that is useful information.
+
+To search for icons, head over to
+[the fontawesome site.](https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free)
+
+## New pages:
+
+New pages go in the root directory. They will show a menu item above the line
+in the sidebar by default.
+
+If they have `hide: true` in the frontmatter. They will not display a menu
+item. `/privatemessaging.md` is an example of that.
+
+## Removed:
+
+Blog directory and base pages/layouts were removed.
+
+## Staging locally:
+
+[Instructions here](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+
+I strongly recommend setting this up in a VM so that when ruby decides to be
+annoying because you upgraded, you just make a new VM.
+
+
+# Original README.md follows
+
+## ⚠️ Unmaintained ⚠️
+
+## Prologue - Jekyll Theme
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-prologue.svg)](https://badge.fury.io/rb/jekyll-theme-prologue)
 
@@ -10,7 +55,7 @@ This is Prologue, a simple, single page responsive site template from [HTML5 UP]
 
 **Demo**: https://chrisbobbe.github.io/jekyll-theme-prologue/
 
-# Added Features
+## Added Features
 
 * **Blogging and multi-page features you expect from Jekyll**
 * Compatible with GitHub Pages
@@ -22,7 +67,7 @@ This is Prologue, a simple, single page responsive site template from [HTML5 UP]
 * **Google Analytics** built-in; just put your [Tracking ID](https://support.google.com/analytics/answer/1008080?hl=en) in `_config.yml` as `google_analytics`
 * Custom **404 page** (called 404.html; to activate, move it to your project directory).
 
-# Installation
+## Installation
 
 There are two ways to get started (choose one):
 
@@ -31,7 +76,7 @@ There are two ways to get started (choose one):
 
 Next, make sure that `url` and `base_url` are set for your own website in `_config.yml`. For local testing, make them both blank. Add a photo avatar to your project, then set `avatar: path/to/your/avatar.jpg` in _config.yml; for example, `avatar: assets/images/avatar.jpg` (48x48 pixels works best). Poke around the sample `_config.yml` file to see how you can add your social profiles.
 
-# Build your homepage
+## Build your homepage
 
 1. **Your `_config.yml` file must include the following line or your homepage won't work**: `collections: [sections]`. This tells Jekyll to look in the _sections folder (which you will create) for your content and render it all on one page.
 
@@ -47,7 +92,7 @@ All new sections should be added as html or Markdown documents in the `_sections
 - `auto-header` (optional; "use-title" is default, "none" for no header, or custom header text)
 - `hide` (optional; if `true`, the section won't appear)
 
-# Start blogging!
+## Start blogging!
 
 Jekyll has great resources to get you started writing blog posts. Check out [this Jekyll Docs page](https://jekyllrb.com/docs/posts/) first. When you've written a post or two, copy the following into a new file in your project directory called `blog.html`, and you'll see a link to your blog from the homepage:
 
@@ -60,7 +105,7 @@ title: My Blog
 
 -- and that's it!
 
-# Add a page
+## Add a page
 
 To add a page, just make a new .html or .md file in your project directory. There's an example called `reading-list` [provided](https://github.com/chrisbobbe/jekyll-theme-prologue/blob/master/reading-list.md) with the GitHub repository. Add this frontmatter:
 
@@ -82,11 +127,11 @@ You can also set these page variables in the frontmatter, if you want:
 
 For advanced SEO, this theme also lets you add `permalink` (see [Jekyll Docs](https://jekyllrb.com/docs/permalinks/#where-to-configure-permalinks)), `robots` (string, e.g. "noindex, nofollow"), and `canonical` (boolean; true is default) to any page or post.
 
-# Contributing
+## Contributing
 
 Please feel free to submit issues and feature requests!
 
-# Credits
+## Credits
 
 Thanks to @andrewbanchich for his many Jekyll adaptations of HTML5 UP's elegant themes, which helped and inspired me, and of course many thanks to HTML5 UP.
 
