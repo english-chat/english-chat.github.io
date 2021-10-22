@@ -11,8 +11,10 @@ order: 1
 
 <div id="topic" style="margin-bottom: 30px;"></div>
   <script>
-    $.getJSON("https://simplescraper.io/api/jtAupao2aSxLlHzrG1cD?apikey=WFA3S9Ex7jWLUVYveQZp7sVdIKrbyXmb&limit=1", function(result){
-      var topic = result.data[0]["latest_topic"] +"";
+    $.getJSON('http://api.allorigins.win/get?url=https%3A//netsplit.de/channels/details.php%3Froom%3D%2523%2523English%26net%3DLibera.Chat&callback=?', function (result){
+      var parser = new DOMParser();
+      var parsedhtml = parser.parseFromString(result.contents, "text/html");
+	  var topic = parsedhtml.getElementsByTagName("td")[3].textContent.trim();
       wotd = topic.search("WotD:");
       wotd = topic.substring(wotd);
       $("#topic").text(wotd);
