@@ -18,9 +18,9 @@ order: 1
       wotd = topic.substring(wotd);
 
       var more = document.createElement('a');
-      var linkText = document.createTextNode("See more Wotd");
+      var linkText = document.createTextNode("See more WotD");
       more.appendChild(linkText);
-      more.title = "See more Wotd";
+      more.title = "See more WotD";
       more.href = "/wotd";
 
       var br = document.createElement('br');
