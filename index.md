@@ -11,7 +11,7 @@ order: 1
 
 <div id="topic" style="margin-bottom: 30px;"></div>
   <script>
-    $.getJSON('http://api.allorigins.win/get?url=https%3A//netsplit.de/channels/details.php%3Froom%3D%2523%2523English%26net%3DLibera.Chat&callback=?', function (result){
+    $.getJSON('https://api.allorigins.win/get?url=https%3A//netsplit.de/channels/details.php%3Froom%3D%2523%2523English%26net%3DLibera.Chat&callback=?', function (result){
       var parser = new DOMParser();
       var parsedhtml = parser.parseFromString(result.contents, "text/html");
 	  var topic = parsedhtml.getElementsByTagName("td")[3].textContent.trim();
